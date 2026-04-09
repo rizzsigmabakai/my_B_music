@@ -14,7 +14,6 @@ body {
     overflow-x: hidden;
 }
 
-/* меню */
 nav {
     width: 100%;
     background: #1a1a1a;
@@ -28,7 +27,7 @@ nav {
     max-width: 1400px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* разносит лого и нос по краям */
+    justify-content: space-between;
     align-items: center;
     padding: 10px 25px;
 }
@@ -37,7 +36,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 12px;
-    flex: 1; /* дает логотипу пространство слева */
+    flex: 1; 
 }
 
 .logo-img {
@@ -59,7 +58,7 @@ nav {
     display: flex;
     gap: 30px;
     justify-content: center;
-    flex: 2; /* центрирует само меню */
+    flex: 2; 
 }
 
 .menu li a {
@@ -78,7 +77,7 @@ nav {
 .nav-tools {
     display: flex;
     justify-content: flex-end;
-    flex: 1; /* уравновешивает правую сторону */
+    flex: 1;
 }
 
 .freddy-nose {
@@ -101,7 +100,6 @@ nav {
     background: #ccff00;
 }
 
-/* заголовок по центру */
 header {
     margin: 80px 0 50px;
     text-align: center;
@@ -112,7 +110,7 @@ header {
 }
 
 header h1 {
-    font-size: 5rem; /* сделал побольше для стиля */
+    font-size: 5rem; 
     text-transform: uppercase;
     letter-spacing: 15px;
     margin-bottom: 20px;
@@ -132,10 +130,9 @@ header h1 {
     line-height: 1.6;
     font-size: 1.2rem;
     font-style: italic;
-    text-align: center; /* четко по центру */
+    text-align: center;
 }
 
-/* карточки */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -213,9 +210,54 @@ header h1 {
     background: #ccff00;
     color: #000;
 }
+@media (max-width: 600px) {
+    .nav-container {
+        flex-direction: column; 
+        gap: 15px;
+        padding: 15px 10px;
+    }
 
-@media (max-width: 1100px) { .grid-container { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 650px) { 
-    .grid-container { grid-template-columns: 1fr; }
-    header h1 { font-size: 3rem; }
+    .menu {
+        gap: 15px;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+
+    .logo-site-name {
+        font-size: 1.4rem; 
+    }
+
+    header {
+        margin: 40px 0 30px;
+    }
+
+    header h1 {
+        font-size: 2.5rem; 
+        letter-spacing: 5px;
+    }
+
+    .greeting {
+        font-size: 1rem;
+        padding: 0 15px;
+        max-width: 100%;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; 
+        width: 90%;
+        gap: 20px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .vinyl-wrapper {
+        width: 140px;
+        height: 140px;
+    }
+
+    .vinyl-disk {
+        display: none; 
+    }
 }
